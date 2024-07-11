@@ -10,6 +10,7 @@
             margin: 0; /* Remove default margin */
             padding: 0; /* Remove default padding */
         }
+
         #resolveForm {
             margin: 0 auto;
             padding: 20px;
@@ -20,105 +21,153 @@
             background-color: #ffffff; /* White background */
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+
         #resolveForm input[type="text"],
         #resolveForm textarea {
             width: calc(100% - 22px);
-            padding: 10px;
-            margin-bottom: 10px;
+            padding: 13px; /* Increased padding */
+            margin-bottom: 13px; /* Increased margin */
             border: 1px solid #ccc;
             border-radius: 3px;
             box-sizing: border-box; /* Ensure padding is included in width */
+            font-size: 18px; /* Increased font size */
         }
+
         #resolveForm textarea {
-            height: 100px;
+            height: 130px; /* Increased height */
         }
+
         #resolveForm button {
-            padding: 10px 15px;
+            padding: 13px 20px; /* Increased padding */
             background-color: #520569;
             color: white;
             border: none;
             border-radius: 3px;
             cursor: pointer;
             display: block; /* Ensure button is displayed as a block element */
-            margin-top: 10px; /* Add some spacing above the button */
+            margin-top: 15px; /* Increased spacing above the button */
+            font-size: 18px; /* Increased font size */
         }
+
         #resolveForm button:hover {
             background-color: #520569;
         }
+
         #logo {
             text-align: center;
             margin-top: 20px;
             margin-bottom: 20px;
         }
+
         #logo img {
-            max-width: 20%; /* Ensure logo resizes with its container */
+            max-width: 19%; /* Ensure logo resizes with its container */
             height: auto; /* Maintain aspect ratio */
         }
-        .header2{
+
+        .header2 {
             font-size: xx-large;
             font-weight: bolder;
             font-family: Georgia, 'Times New Roman', Times, serif;
             font-variant: small-caps;
             color: #490039;
             text-align: center;
-
         }
 
-    .header1{
-        font-size: x-large;
-        font-weight: 300;
-        color: #490039 ;
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        text-align: center;
-    }
-    .header4{
-        text-align: center;
-        font-size: x-large;
-        font-weight: 300;
-        font-style: normal;
-        font-weight: bold;
-        font-family: ;
+        .header1 {
+            font-size: x-large;
+            font-weight: 300;
+            color: #490039;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-align: center;
+        }
 
-    }
+        .header4 {
+            text-align: center;
+            font-size: x-large;
+            font-weight: 300;
+            font-style: normal;
+            font-weight: bold;
+        }
+
+        .replyForm {
+            margin-top: 20px;
+        }
+
+        .replyForm label {
+            font-size: 18px; /* Increased font size */
+        }
+
+        .replyForm select {
+            width: calc(100% - 22px);
+            padding: 13px; /* Increased padding */
+            margin-bottom: 13px; /* Increased margin */
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box; /* Ensure padding is included in width */
+            font-size: 18px; /* Increased font size */
+        }
     </style>
 </head>
 <body>
 
-    
-
-    <div id="resolveForm">
-            
+<div id="resolveForm">
     <div class="header2">TFG</div>
     <div class="header2">6-S</div>
-    <div class="header1">Warehouse Management System</div>
-        <div id="logo">
-            <img src="data:image/png;base64,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" alt="TFG 6-S Logo">
-        </div>
-       
-        <h2 style="text-align: center; font-size: x-large; font-weight: 300; color: #490039; font-family: Georgia, 'Times New Roman', Times, serif;">Assignment Resolution</h2>
-
-        <form id="replyForm" enctype="multipart/form-data" method="post" action="http://10.32.228.102:8083/form2">
-            <div class="form-group">
-                <label for="reference_number">Reference Number:</label>
-                <input type="text" id="reference_number" name="reference_number" required>
-            </div>
-
-            <div class="form-group">
-                <label for="remarks">Remarks:</label>
-                <textarea id="remarks" name="remarks" required></textarea>
-            </div>
-
-            <div class="form-group">
-                <label>Action:</label><br>
-                <input type="radio" id="approve" name="action" value="approve" required>
-                <label for="approve">Approve</label><br>
-                <input type="radio" id="decline" name="action" value="decline" required>
-                <label for="decline">Decline</label>
-            </div>
-
-            <button type="submit">Submit Resolution</button>
-        </form>
+    <div class="header1">Incident Management System</div>
+    <div id="logo">
+        <img src="data:image/png;base64,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" alt="TFG 6-S Logo">
     </div>
+    <h2 style="text-align: center; font-size: x-large; font-weight: 300; color: #490039; font-family: Georgia, 'Times New Roman', Times, serif;">Assignment Resolution</h2>
+    <div class="replyForm">
+        <label for="assignee">Assignee ID :</label>
+        <select id="assignee" name="assignee">
+            <option value="">Select Assignee</option>
+            <option value="BakhonaS@tfg.co.za">Bakhona Sithembu</option>
+            <option value="OratileM@tfg.co.za">Oratile Motlogeloa </option>
+            <option value="RaymondM@tfg.co.za">Raymond Manaka</option>
+            <option value="MolekoD@tfg.co.za">Moleko Ditira</option>
+            <option value="KaraboL@tfg.co.za">Karabo Leshabane</option>
+            <option value="MandlakayiseV@tfg.co.za">Mandlakayise Vilakazi</option>
+            <option value="ShadrackM@tfg.co.za">Shadrack Motha</option>
+            <option value="JonasM@tfg.co.za">Jonas Maruping</option>
+            <option value="ThaboTj@tfg.co.za">Thabo Tjamela</option>
+            <option value="ValeryS@tfg.co.za">Valery Sangweni</option>
+            <option value="TshepoP@tfg.co.za">Tshepo Phetla</option>
+            <option value="MbalenhleD@tfg.co.za">Mbalenhle Dlongolo</option>
+            <option value="OarabileN@tfg.co.za">Oarabile Nicodemus</option>
+            <option value="KgaboM@tfg.co.za">Kgabo Maea</option>
+            <option value="KarenHo@tfg.co.za ">Karen Tanya Hoker</option>
+            <option value="MaliekD@tfg.co.za">Maliek Davids</option>
+            <option value="RallyN@tfg.co.za">Rally Ndhlovu </option>
+            <option value="MlungisiMb@tfg.co.za">Mlungisi Mbatha</option>
+            <option value="Trevor.mafundza@style.rtt.co.za">Trevor Mafundza</option>
+            <option value="NomvulaM@tfg.com">Nomvula Mantikwe</option>
+            <option value="Dr.M@tfg.co.za">Philip Manaka</option>
+            <option value="BongileM@tfg.co.za">Bongile Mashudu</option>
+            <option value="InnocentM@tfg.co.za">Innocent Mkhize</option>
+            <option value="Mseango@tcsunits.co.za">Rose Seango</option>
+            <option value="s3rv3rtfg@outlook.com">Munangiwa Ravhura</option>
+        </select>
+    </div>
+    <form id="replyForm" enctype="multipart/form-data" method="post" action="http://10.32.228.102:8083/form2">
+        <div class="form-group">
+            <label for="reference_number">Reference Number:</label>
+            <input type="text" id="reference_number" name="reference_number" required>
+        </div>
+        <div class="form-group">
+            <label for="remarks">Remarks:</label>
+            <textarea id="remarks" name="remarks" required></textarea>
+        </div>
+        <div class="form-group">
+            <label>Action:</label><br>
+            <input type="radio" id="approve" name="action" value="approve" required>
+            <label for="approve">Approve</label><br>
+            <input type="radio" id="decline" name="action" value="decline" required>
+            <label for="decline">Decline</label>
+        </div>
+        <button type="submit">Submit Resolution</button>
+    </form>
+</div>
+
 </body>
 </html>
-
